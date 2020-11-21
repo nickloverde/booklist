@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React, {Component} from 'react'
 import './App.css';
+import Header from './Components/Header'
+import Shelf from './Components/Shelf'
+import Booklist from './Components/Booklist'
+import SearchBar from './Components/SearchBar'
+import books from './data'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(){
+    super()
+    this.state = {
+
+    }
+  }
+    render(){
+    return (
+      <div className="App">
+        <div>
+          <Header/>
+        </div>
+
+        <div>
+          <SearchBar/>
+        </div>
+
+        <div class="App-body">
+          <Booklist />
+          <Shelf/>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
